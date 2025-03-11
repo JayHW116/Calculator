@@ -15,10 +15,20 @@ void tearDown(void) {
 void test_add_positive_numbers(void) {
 TEST_ASSERT_EQUAL(5, add(2, 3)); // We expect 2 + 3 to be 5
 }
+void test_subtract_positive_numbers(void) {
+	TEST_ASSERT_EQUAL(0, subtract(3, 3)); 
+}
+void test_multiply_positive_numbers(void) {
+	TEST_ASSERT_EQUAL(9, multiply(3, 3)); 
+}
+void test_divide_positive_numbers(void) {
+	TEST_ASSERT_EQUAL(1, divide(3, 3)); 
+}
 
 void test_add_positive_and_negative_numbers(void) {
 	TEST_ASSERT_EQUAL(1, add(5, -4)); //expect 5 + -4 = 1
 }
+
 void test_add_negative_numbers(void) {
 TEST_ASSERT_EQUAL(-7, add(-3, -4)); //expect -3 + -4 = -7
 }
@@ -40,6 +50,9 @@ TEST_ASSERT_TRUE(result > 0); //This checks if underflow occurred
 int main(void) {
 UNITY_BEGIN();
 RUN_TEST(test_add_positive_numbers);
+RUN_TEST(test_subtract_positive_numbers);
+RUN_TEST(test_multiply_positive_numbers);
+RUN_TEST(test_divide_positive_numbers);
 RUN_TEST(test_add_positive_and_negative_numbers);
 RUN_TEST(test_add_negative_numbers);
 RUN_TEST(test_add_zero);
