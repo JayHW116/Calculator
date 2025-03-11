@@ -85,6 +85,34 @@ void test_add_underflow(void) {
 int result = add(INT_MIN, -1);
 TEST_ASSERT_TRUE(result > 0); //This checks if underflow occurred
 }
+
+void test_subtract_overflow(void) {
+	int result = subtract(INT_MAX, 1);
+	TEST_ASSERT_TRUE(result > 0);
+	}
+	
+void test_subtract_underflow(void) {
+int result = subtract(INT_MIN, -1);
+TEST_ASSERT_TRUE(result < 0); 
+}
+
+void test_multiply_overflow(void) {
+	int result = multiply(INT_MAX, 2);
+	TEST_ASSERT_TRUE(result < 0);
+	}
+	
+void test_multiply_underflow(void) {
+int result = multiply(INT_MIN, 2);
+TEST_ASSERT_TRUE(result > 0); 
+}
+
+void test_divide_overflow(void) {
+	int result = divide(INT_MAX, -1);
+	TEST_ASSERT_TRUE(result < 0);
+	}
+	
+
+
 int main(void) {
 UNITY_BEGIN();
 RUN_TEST(test_add_positive_numbers);
@@ -105,6 +133,10 @@ RUN_TEST(test_divide_negative_numbers);
 RUN_TEST(test_divide_zero);
 RUN_TEST(test_add_overflow);
 RUN_TEST(test_add_underflow);
+RUN_TEST(test_subtract_overflow);
+RUN_TEST(test_subtract_underflow);
+RUN_TEST(test_multiply_overflow);
+RUN_TEST(test_divide_overflow);
 return UNITY_END();
 }
 	
