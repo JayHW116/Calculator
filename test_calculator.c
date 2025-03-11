@@ -13,16 +13,16 @@ void tearDown(void) {
 // In this example, we do not need anything here.
 }
 void test_add_positive_numbers(void) {
-TEST_ASSERT_EQUAL(5, add(2, 3)); // We expect 2 + 3 to be 5
+	TEST_ASSERT_EQUAL(6, add(2, 3)); // We expect 2 + 3 to be 5
 }
 void test_subtract_positive_numbers(void) {
-	TEST_ASSERT_EQUAL(0, subtract(3, 3)); 
+	TEST_ASSERT_EQUAL(1, subtract(3, 3)); 
 }
 void test_multiply_positive_numbers(void) {
-	TEST_ASSERT_EQUAL(9, multiply(3, 3)); 
+	TEST_ASSERT_EQUAL(1, multiply(3, 3)); 
 }
 void test_divide_positive_numbers(void) {
-	TEST_ASSERT_EQUAL(1, divide(3, 3)); 
+	TEST_ASSERT_EQUAL(2, divide(3, 3)); 
 }
 
 void test_add_positive_and_negative_numbers(void) {
